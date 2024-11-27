@@ -13,7 +13,6 @@ signals:
 
 private:
     QString m_jsonFilePath;
-    QString generateQmlContent(const QJsonObject &jsonData);
     QString parseWindow(const QJsonObject &windowObject);
     bool saveQmlToFile(const QString &qmlContent, const QString &outputQmlPath);
     QString parseComponent(const QJsonObject &componentObject);

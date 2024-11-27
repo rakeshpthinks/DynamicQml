@@ -42,62 +42,7 @@ bool ParseJson::parseAndGenerateQml(const QString &outputQmlPath)
     return true;
 }
 
-QString ParseJson::generateQmlContent(const QJsonObject &jsonObj)
-{
-    QString qmlContent;
-    QTextStream stream(&qmlContent);
 
-    QJsonObject windowObject = jsonObj.value("Window").toObject();
-    QString windowTitle = windowObject.value("title").toString();
-    int windowWidth = windowObject.value("width").toInt();
-    int windowHeight = windowObject.value("height").toInt();
-
-    // Start generating QML
-    stream << "import QtQuick 2.15\n";
-    stream << "import QtQuick.Controls 2.15\n\n";
-    stream << "import QtQuick.Layouts 2.15\n\n";
-    stream << "ApplicationWindow {\n";
-    stream << "    id: root\n";
-    stream << "    visible: true\n";
-    stream << "    title: \"" << windowTitle << "\"\n";
-    stream << "    width: " << windowWidth << "\n";
-    stream << "    height: " << windowHeight << "\n\n";
-
-    stream << "    ColumnLayout {\n";
-    stream << "        anchors.fill: parent\n";
-    stream << "        spacing: 10\n\n";
-
-    // Process components
-    QJsonArray componentsArray = windowObject.value("components").toArray();
-    for (const QJsonValue &componentValue : componentsArray) {
-        QJsonObject componentObject = componentValue.toObject();
-        QString componentType = componentObject.value("type").toString();
-        QJsonObject propertiesObject = componentObject.value("properties").toObject();
-
-        stream << "        " << componentType << " {\n";
-        for (const QString &key : propertiesObject.keys()) {
-            QJsonValue propertyValue = propertiesObject.value(key);
-
-            // Handle different property types
-            if (propertyValue.isString()) {
-                stream << "            " << key << ": \"" << propertyValue.toString() << "\"\n";
-            } else if (propertyValue.isDouble()) {
-                stream << "            " << key << ": " << propertyValue.toDouble() << "\n"; // Convert numeric values
-            } else if (propertyValue.isBool()) {
-                stream << "            " << key << ": " << (propertyValue.toBool() ? "true" : "false") << "\n";
-            } else {
-                stream << "            // Unknown type for key: " << key << "\n"; // Add a placeholder for debugging
-            }
-        }
-
-        stream << "        }\n\n";
-    }
-
-    stream << "    }\n"; // Close ColumnLayout
-    stream << "}\n";     // Close ApplicationWindow
-
-    return qmlContent;
-}
 
 QString ParseJson::parseWindow(const QJsonObject &windowObject)
 {
