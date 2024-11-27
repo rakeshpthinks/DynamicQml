@@ -1,0 +1,89 @@
+{
+    "Window": {
+        "width": 800,
+        "height": 600,
+        "title": "Dynamic Application",
+        "tabs": [
+            {
+                "title": "Slider Tab",
+                "layout": "ColumnLayout",
+                "layoutProperties": {
+                    "spacing": 10
+                },
+                "components": [
+                    {
+                        "type": "CustomSlider",
+                        "properties": {
+                            "minimum": 0,
+                            "maximum": 100,
+                            "value": 30,
+                            "stepSize": 5,
+                            "trackColor": "lightgrey",
+                            "progressColor": "green",
+                            "handleColor": "red"
+                        }
+                    },
+                    {
+                        "type": "Text",
+                        "properties": {
+                            "text": "Slider Value",
+                            "font.pixelSize": 16,
+                            "color": "blue"
+                        }
+                    }
+                ]
+            },
+            {
+                "title": "Progress Tab",
+                "layout": "RowLayout",
+                "layoutProperties": {
+                    "spacing": 15
+                },
+                "components": [
+                    {
+                        "type": "CustomProgressBar",
+                        "properties": {
+                            "minimumValue": 0,
+                            "maximumValue": 100,
+                            "value": 70,
+                            "trackColor": "gray",
+                            "progressColor": "blue"
+                        }
+                    },
+                    {
+                        "type": "Switch",
+                        "properties": {
+                            "checked": true
+
+                        }
+                    }
+                ]
+            },
+            {
+                "title": "Input Tab",
+                "layout": "GridLayout",
+                "layoutProperties": {
+                    "columns": 2,
+                    "rowSpacing": 10,
+                    "columnSpacing": 15
+                },
+                "components": [
+                    {
+                        "type": "TextField",
+                        "properties": {
+                            "placeholderText": "Enter your name",
+                            "width": 200
+                        }
+                    },
+                    {
+                        "type": "Button",
+                        "properties": {
+                            "text": "Submit"
+
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}

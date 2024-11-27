@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/CustomSlider.qml</file>
+        <file>qml/CustomProgressBar.qml</file>
+    </qresource>
+</RCC>
