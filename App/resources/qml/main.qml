@@ -34,8 +34,11 @@ ApplicationWindow {
             Layout.fillHeight: true
 
             Item {
-            ColumnLayout {
-                spacing: 10
+            CustomColumnLayout {
+                backgroundColor: "#f0f0f0"
+                borderColor: "black"
+                borderWidth: 2
+                spacing: 20
                     CustomSlider {
                         handleColor: "red"
                         maximum: 100
@@ -53,7 +56,10 @@ ApplicationWindow {
                 }
             }
             Item {
-            RowLayout {
+            CustomRowLayout {
+                backgroundColor: "#e0e0e0"
+                borderColor: "gray"
+                borderWidth: 1
                 spacing: 15
                     CustomProgressBar {
                         maximumValue: 100
@@ -68,7 +74,10 @@ ApplicationWindow {
                 }
             }
             Item {
-            GridLayout {
+            CustomGridLayout {
+                backgroundColor: "#dff2ff"
+                borderColor: "blue"
+                borderWidth: 3
                 columnSpacing: 15
                 columns: 2
                 rowSpacing: 10

@@ -6,9 +6,12 @@
         "tabs": [
             {
                 "title": "Slider Tab",
-                "layout": "ColumnLayout",
+                "layout": "CustomColumnLayout",
                 "layoutProperties": {
-                    "spacing": 10
+                    "spacing": 20,
+                    "backgroundColor": "#f0f0f0",
+                    "borderWidth": 2,
+                    "borderColor": "black"
                 },
                 "components": [
                     {
@@ -35,9 +38,12 @@
             },
             {
                 "title": "Progress Tab",
-                "layout": "RowLayout",
+                "layout": "CustomRowLayout",
                 "layoutProperties": {
-                    "spacing": 15
+                    "spacing": 15,
+                    "backgroundColor": "#e0e0e0",
+                    "borderWidth": 1,
+                    "borderColor": "gray"
                 },
                 "components": [
                     {
@@ -61,11 +67,14 @@
             },
             {
                 "title": "Input Tab",
-                "layout": "GridLayout",
+                "layout": "CustomGridLayout",
                 "layoutProperties": {
                     "columns": 2,
                     "rowSpacing": 10,
-                    "columnSpacing": 15
+                    "columnSpacing": 15,
+                    "backgroundColor": "#dff2ff",
+                    "borderWidth": 3,
+                    "borderColor": "blue"
                 },
                 "components": [
                     {

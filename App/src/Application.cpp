@@ -15,5 +15,6 @@ Application::Application(int &argc, char **argv) :QApplication(argc,argv),
 
 void Application::init()
 {
-    m_parseJson.get()->parseAndGenerateQml(QCoreApplication::applicationDirPath() + "/resources/qml/main.qml");
+    m_parseJson.get()->
+        parseAndGenerateQml(QCoreApplication::applicationDirPath() + "/resources/qml/main.qml");
 }
