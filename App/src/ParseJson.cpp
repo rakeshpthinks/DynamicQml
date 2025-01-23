@@ -72,15 +72,16 @@ QString ParseJson::parseWindow(const QJsonObject &windowObject) {
 QString ParseJson::parseTab(const QJsonArray &tabsArray) {
     QString qml = "    ColumnLayout {\n"
                   "        anchors.fill: parent\n\n"
-                  "        TabBar {\n"
-                  "            id: tabBar\n"
-                  "            Layout.fillWidth: true\n";
+                  "        CustomTabBar {\n"
+                  "            id: customTabBar\n"
+                  "            Layout.fillWidth: true\n"
+                  "            onTabIndexChanged: contentStack.currentIndex = customTabBar.currentIndex\n"; // Connect signal
 
     for (int i = 0; i < tabsArray.size(); ++i) {
         const QJsonObject tab = tabsArray[i].toObject();
-        qml += QString("            TabButton {\n"
+        qml += QString("            CustomTabButton {\n"
                        "                text: \"%1\"\n"
-                       "                onClicked: contentStack.currentIndex = %2\n"
+                       "                onClicked: customTabBar.currentIndex = %2\n"
                        "            }\n")
                    .arg(tab["title"].toString())
                    .arg(i);

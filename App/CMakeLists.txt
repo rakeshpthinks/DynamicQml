@@ -10,7 +10,7 @@ set(CMAKE_CXX_STANDARD 17)
 find_package(Qt6 REQUIRED COMPONENTS Core Gui Qml Quick Widgets Mqtt)
 
 set(QML_IMPORT_PATH
-    ${CMAKE_CURRENT_SOURCE_DIR}/resources/qml/Components
+    # ${CMAKE_CURRENT_SOURCE_DIR}/resources/qml/Components
     ${CMAKE_CURRENT_SOURCE_DIR}/resources/qml
 )
 

@@ -5,7 +5,8 @@
         <file>qml/CustomColumnLayout.qml</file>
         <file>qml/CustomRowLayout.qml</file>
         <file>qml/CustomGridLayout.qml</file>
-        <file>qml/CustomTab.qml</file>
+        <file>qml/CustomTabBar.qml</file>
         <file>qml/CustomTabLayout.qml</file>
+        <file>qml/CustomTabButton.qml</file>
     </qresource>
 </RCC>

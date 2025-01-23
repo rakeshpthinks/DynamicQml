@@ -11,20 +11,21 @@ ApplicationWindow {
     ColumnLayout {
         anchors.fill: parent
 
-        TabBar {
-            id: tabBar
+        CustomTabBar {
+            id: customTabBar
             Layout.fillWidth: true
-            TabButton {
+            onTabIndexChanged: contentStack.currentIndex = customTabBar.currentIndex
+            CustomTabButton {
                 text: "Slider Tab"
-                onClicked: contentStack.currentIndex = 0
+                onClicked: customTabBar.currentIndex = 0
             }
-            TabButton {
+            CustomTabButton {
                 text: "Progress Tab"
-                onClicked: contentStack.currentIndex = 1
+                onClicked: customTabBar.currentIndex = 1
             }
-            TabButton {
+            CustomTabButton {
                 text: "Input Tab"
-                onClicked: contentStack.currentIndex = 2
+                onClicked: customTabBar.currentIndex = 2
             }
         }
 
