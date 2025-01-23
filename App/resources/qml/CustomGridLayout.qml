@@ -3,6 +3,9 @@ import QtQuick.Layouts 1.15
 
 GridLayout {
     id: customGrid
+    Layout.fillWidth: true
+    Layout.fillHeight: true
+    anchors.fill: parent
     // property alias customRowSpacing: rowSpacing
     // property alias customColumnSpacing: columnSpacing
     // property alias customColumns: columns
@@ -10,11 +13,11 @@ GridLayout {
     property real borderWidth: 0
     property color borderColor: "transparent"
 
-    Rectangle {
-        anchors.fill: parent
-        color: customGrid.backgroundColor
-        border.color: customGrid.borderColor
-        border.width: customGrid.borderWidth
-        z: -1
-    }
+    // Rectangle {
+    //     anchors.fill: parent
+    //     color: customGrid.backgroundColor
+    //     border.color: customGrid.borderColor
+    //     border.width: customGrid.borderWidth
+    //     z: -1
+    // }
 }

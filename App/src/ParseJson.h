@@ -18,6 +18,7 @@ private:
     QString parseComponent(const QJsonObject &componentObject);
     QString parseLayout(const QJsonObject & layoutObject);
     QString parseTab(const QJsonArray &tabObjects);
+    QString formatJsonValue(const QJsonValue& value);
 };
 
 #endif // PARSEJSON_H

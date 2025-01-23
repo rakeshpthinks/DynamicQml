@@ -2,16 +2,60 @@
     "Window": {
         "width": 800,
         "height": 600,
-        "title": "DynamicUI App",
+        "title": "Dynamic Application",
         "tabs": [
             {
-                "title": "Slider Tab",
+                "title": "Tab 1",
                 "layout": "CustomColumnLayout",
                 "layoutProperties": {
-                    "spacing": 20,
+                    "spacing": 10,
                     "backgroundColor": "#d0f2ec",
                     "borderWidth": 2,
                     "borderColor": "black"
+                },
+                "components": [
+                   {
+                        "type": "Rectangle",
+                        "properties": {
+                            "width" : 100,
+                            "height" : 100,
+                            "color": "blue"
+                        }
+                    },
+                    {
+                        "type": "Rectangle",
+                        "properties": {
+                            "width" : 100,
+                            "height" : 100,
+                            "color": "green"
+                        }
+                    },
+                    {
+                        "type": "Rectangle",
+                        "properties": {
+                            "width" : 100,
+                            "height" : 100,
+                            "color": "red"
+                        }
+                    },
+                    {
+                        "type": "Rectangle",
+                        "properties": {
+                            "width" : 100,
+                            "height" : 100,
+                            "color": "yellow"
+                        }
+                    }
+                ]
+            },
+            {
+                "title": "Tab 2",
+                "layout": "CustomRowLayout",
+                "layoutProperties": {
+                    "spacing": 15,
+                    "backgroundColor": "#e0e0e0",
+                    "borderWidth": 3,
+                    "borderColor": "gray"
                 },
                 "components": [
                     {
@@ -33,66 +77,16 @@
                             "height" : 100,
                             "color": "blue"
                         }
-                    },
-                    {
-                        "type": "Rectangle",
-                        "properties": {
-                            "width" : 100,
-                            "height" : 100,
-                            "color": "blue"
-                        }
-                    },
-                    {
-                        "type": "CustomSlider",
-                        "properties": {
-                            "minimum": 0,
-                            "maximum": 100,
-                            "value": 30,
-                            "stepSize": 5,
-                            "trackColor": "lightgrey",
-                            "progressColor": "blue",
-                            "handleColor": "green"
-                        }
-                    }
-
-                ]
-            },
-            {
-                "title": "Progress Tab",
-                "layout": "CustomRowLayout",
-                "layoutProperties": {
-                    "spacing": 15,
-                    "backgroundColor": "#e0e0e0",
-                    "borderWidth": 1,
-                    "borderColor": "gray"
-                },
-                "components": [
-                    {
-                        "type": "CustomProgressBar",
-                        "properties": {
-                            "minimumValue": 0,
-                            "maximumValue": 100,
-                            "value": 70,
-                            "trackColor": "gray",
-                            "progressColor": "blue"
-                        }
-                    },
-                    {
-                        "type": "Switch",
-                        "properties": {
-                            "checked": true
-
-                        }
                     }
                 ]
             },
             {
-                "title": "Input Tab",
+                "title": "Tab 3",
                 "layout": "CustomGridLayout",
                 "layoutProperties": {
-                    "columns": 2,
+                    "columns": 3,
                     "rowSpacing": 10,
-                    "columnSpacing": 5,
+                    "columnSpacing": 15,
                     "backgroundColor": "#dff2ff",
                     "borderWidth": 3,
                     "borderColor": "blue"
@@ -102,25 +96,41 @@
                     {
                         "type": "Rectangle",
                         "properties": {
-                            "width" : 300,
-                            "height" : 300,
+                            "width" : 100,
+                            "height" : 100,
                             "color": "blue"
                         }
                     },
                     {
                         "type": "Rectangle",
                         "properties": {
-                            "width" : 300,
-                            "height" : 300,
+                            "width" : 100,
+                            "height" : 100,
                             "color": "green"
                         }
                     },
                     {
                         "type": "Rectangle",
                         "properties": {
-                            "width" : 300,
-                            "height" : 300,
+                            "width" : 100,
+                            "height" : 100,
                             "color": "red"
+                        }
+                    },
+                    {
+                        "type": "Rectangle",
+                        "properties": {
+                            "width" : 100,
+                            "height" : 100,
+                            "color": "yellow"
+                        }
+                    },
+                    {
+                        "type": "Rectangle",
+                        "properties": {
+                            "width" : 100,
+                            "height" : 100,
+                            "color": "yellow"
                         }
                     }
                 ]
@@ -128,3 +138,4 @@
         ]
     }
 }
+

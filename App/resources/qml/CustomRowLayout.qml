@@ -2,7 +2,12 @@ import QtQuick 2.15
 import QtQuick.Layouts 1.15
 
 RowLayout {
+
     id: customRow
+    Layout.fillWidth: true
+    Layout.fillHeight: true
+    anchors.fill: parent
+
     // property alias customSpacing: spacing
     property color backgroundColor: "transparent"
     property real borderWidth: 0

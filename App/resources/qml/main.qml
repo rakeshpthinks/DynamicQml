@@ -5,7 +5,7 @@ import QtQuick.Layouts 1.15
 ApplicationWindow {
     width: 800
     height: 600
-    title: "Dynamic Application"
+    title: "DynamicUI App"
     visible: true
 
     ColumnLayout {
@@ -34,11 +34,13 @@ ApplicationWindow {
             Layout.fillHeight: true
 
             Item {
-            CustomColumnLayout {
-                backgroundColor: "#f0f0f0"
-                borderColor: "black"
-                borderWidth: 2
-                spacing: 20
+                CustomColumnLayout {
+                    Layout.fillHeight: true
+
+                    backgroundColor: "#d0f2ec"
+                    borderColor: "black"
+                    borderWidth: 2
+                    spacing: 20
                     CustomSlider {
                         handleColor: "red"
                         maximum: 100
@@ -48,19 +50,35 @@ ApplicationWindow {
                         trackColor: "lightgrey"
                         value: 30
                     }
-                    Text {
+                    Rectangle {
                         color: "blue"
-                        font.pixelSize: 16
-                        text: "Slider Value"
+                        height: 100
+                        width: 100
+                    }
+                    Rectangle {
+                        color: "blue"
+                        height: 100
+                        width: 100
+                    }
+                    CustomSlider {
+                        handleColor: "green"
+                        maximum: 100
+                        minimum: 0
+                        progressColor: "blue"
+                        stepSize: 5
+                        trackColor: "lightgrey"
+                        value: 30
                     }
                 }
             }
             Item {
-            CustomRowLayout {
-                backgroundColor: "#e0e0e0"
-                borderColor: "gray"
-                borderWidth: 1
-                spacing: 15
+                CustomRowLayout {
+                    Layout.fillHeight: true
+
+                    backgroundColor: "#e0e0e0"
+                    borderColor: "gray"
+                    borderWidth: 1
+                    spacing: 15
                     CustomProgressBar {
                         maximumValue: 100
                         minimumValue: 0
@@ -74,19 +92,29 @@ ApplicationWindow {
                 }
             }
             Item {
-            CustomGridLayout {
-                backgroundColor: "#dff2ff"
-                borderColor: "blue"
-                borderWidth: 3
-                columnSpacing: 15
-                columns: 2
-                rowSpacing: 10
-                    TextField {
-                        placeholderText: "Enter your name"
-                        width: 200
+                CustomGridLayout {
+                    Layout.fillHeight: true
+
+                    backgroundColor: "#dff2ff"
+                    borderColor: "blue"
+                    borderWidth: 3
+                    columnSpacing: 5
+                    columns: 2
+                    rowSpacing: 10
+                    Rectangle {
+                        color: "blue"
+                        height: 300
+                        width: 300
                     }
-                    Button {
-                        text: "Submit"
+                    Rectangle {
+                        color: "green"
+                        height: 300
+                        width: 300
+                    }
+                    Rectangle {
+                        color: "red"
+                        height: 300
+                        width: 300
                     }
                 }
             }

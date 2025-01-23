@@ -15,14 +15,6 @@ Item {
     property color progressColor: "dodgerblue"
     property color handleColor: "blue"
 
-
-    // Slider{
-    //     id: slider
-    //     stepSize: customSlider.stepSize
-
-
-    // }
-
     Rectangle {
         id: track
         width: parent.width
@@ -34,7 +26,7 @@ Item {
 
     Rectangle {
         id: progress
-        width: handle.x + handle.width / 2
+        width: Math.min(handle.x + handle.width / 2, track.width)
         height: track.height
         color: progressColor
         anchors.verticalCenter: track.verticalCenter
@@ -64,5 +56,9 @@ Item {
     }
 
     // Update the handle's position when the value changes
-    onValueChanged: handle.x = (value - minimum) / (maximum - minimum) * (track.width - handle.width);
+    onValueChanged: {
+        console.log((value - minimum) / (maximum - minimum) * (track.width - handle.width))
+        handle.x = (value - minimum) / (maximum - minimum) * (track.width - handle.width);
+        progress.width = handle.x + handle.width / 2;
+    }
 }
